@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', 'ViewFontController@index');
 
 Route::get('home', 'HomeController@index');
 
@@ -19,3 +19,7 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+Route::get('api/fonts/css/{name}/{style}', 'API\ViewFontController@css');
+Route::get('api/fonts/css/{name}', 'API\ViewFontController@cssDefault');
+Route::get('api/fonts', 'API\ViewFontController@index');

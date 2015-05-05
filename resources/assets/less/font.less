@@ -1,0 +1,78 @@
+.preview-input{
+	margin-bottom: 20px;
+}
+.font{
+	border: 1px solid #e7e7e7;
+	border-radius: 3px;
+	box-shadow: 1px 1px 1px 0 rgba(230,230,230,0.5);
+	margin-bottom: 20px;
+	h4{
+		font-size: 1em;
+		font-weight: 500;
+		float: left;
+		a{
+			color: #555;
+			&:focus{
+				text-decoration: none;
+			}
+			&:hover{
+				color: @blue;
+				text-decoration: none;
+			}
+		}
+	}
+	h4.author{
+		font-weight: 100;
+		float: right;
+	}
+	.heading{
+		overflow: hidden;
+		background-color: #f8f8f8;
+		border-radius: 3px 3px 0 0;
+		padding: 0 20px;
+	}
+	.body{
+		overflow: hidden;
+		position: relative;
+		padding: 10px 20px;
+	}
+	a.preview{
+		height: 85px;
+		line-height: 85px;
+		display: block;
+		font-size: 2.8em;
+		color: #555;
+		&:focus{
+			text-decoration: none;
+		}
+		&:hover{
+			cursor: pointer;
+			color: @blue;
+			text-decoration: none;
+		}
+	}
+	.buttons{
+		margin: 15px 0;
+		background-color: #fff;
+		position: absolute;
+		top: 0;
+		right: 20px;
+		padding-left: 20px;
+		width: 120px;
+	}
+	.button{
+		width: 100%;
+		display: block;
+		background-color: #eee;
+		padding: 5px 20px;
+		margin: 5px 0;
+		text-align: center;
+		color: #000;
+		font-weight: 500;
+		border-radius: 2px;
+		&:focus,&:hover{
+			text-decoration: none;
+			background-color: #dedede;
+		}
+	}
+}

@@ -1,3 +1,9 @@
 /vendor
 /node_modules
 .env
+
+### Bower ###
+bower_components
+.bower-cache
+.bower-registry
+.bower-tmp

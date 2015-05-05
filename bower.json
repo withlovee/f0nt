@@ -1,0 +1,21 @@
+{
+  "name": "f0nt",
+  "version": "0.0.0",
+  "homepage": "https://github.com/withlovee/f0nt",
+  "authors": [
+    "Vee Trairattanapa <happierv@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "~1.8.3",
+    "jquery": "~2.1.4",
+    "react": "~0.13.2"
+  }
+}

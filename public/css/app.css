@@ -6226,8 +6226,96 @@ button.close {
     display: none !important;
   }
 }
+.preview-input {
+  margin-bottom: 20px;
+}
+.font {
+  border: 1px solid #e7e7e7;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px 0 rgba(230, 230, 230, 0.5);
+  margin-bottom: 20px;
+}
+.font h4 {
+  font-size: 1em;
+  font-weight: 500;
+  float: left;
+}
+.font h4 a {
+  color: #555;
+}
+.font h4 a:focus {
+  text-decoration: none;
+}
+.font h4 a:hover {
+  color: #337ab7;
+  text-decoration: none;
+}
+.font h4.author {
+  font-weight: 100;
+  float: right;
+}
+.font .heading {
+  overflow: hidden;
+  background-color: #f8f8f8;
+  border-radius: 3px 3px 0 0;
+  padding: 0 20px;
+}
+.font .body {
+  overflow: hidden;
+  position: relative;
+  padding: 10px 20px;
+}
+.font a.preview {
+  height: 85px;
+  line-height: 85px;
+  display: block;
+  font-size: 2.8em;
+  color: #555;
+}
+.font a.preview:focus {
+  text-decoration: none;
+}
+.font a.preview:hover {
+  cursor: pointer;
+  color: #337ab7;
+  text-decoration: none;
+}
+.font .buttons {
+  margin: 15px 0;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  padding-left: 20px;
+  width: 120px;
+}
+.font .button {
+  width: 100%;
+  display: block;
+  background-color: #eee;
+  padding: 5px 20px;
+  margin: 5px 0;
+  text-align: center;
+  color: #000;
+  font-weight: 500;
+  border-radius: 2px;
+}
+.font .button:focus,
+.font .button:hover {
+  text-decoration: none;
+  background-color: #dedede;
+}
 body,
 label,
 .checkbox label {
   font-weight: 300;
 }
+.clear {
+  clear: both;
+}
+.hide,
+.hidden {
+  display: none;
+}
+
+/*# sourceMappingURL=app.css.map */
