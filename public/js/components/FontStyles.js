@@ -11,7 +11,7 @@ var FontStyles = React.createClass({
 	},
 
 	getUrl: function(str){
-		return "http://localhost/f0nt/public/api/fonts/css/" + str.replace(/ /g, '+');
+		return "http://" + window.location.host + "/f0nt/public/api/fonts/css/" + str.replace(/ /g, '+');
 	},
 
 	styleId: function(id){
@@ -104,7 +104,7 @@ var FontStyles = React.createClass({
 
 	render: function(){
 		var fontFamilyStyle = {
-			fontFamily: this.props.name,
+			fontFamily: '"' + this.props.name + '", sans-serif',
 			fontSize: '2em'
 		};
 

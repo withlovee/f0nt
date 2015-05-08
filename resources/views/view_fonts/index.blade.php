@@ -3,6 +3,7 @@
 @section('content')
 <div class="container">
 	<div id="app"></div>
+	<div id="url" class="hidex">{{ action('ViewFontController@index') }}</div>
 </div>
 @endsection
 
