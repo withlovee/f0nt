@@ -10,13 +10,6 @@ use App\FontStyle;
 
 class ViewFontController extends Controller {
 
-	const STYLES = [
-		'normal' => ['normal', 'normal'],
-		'italic' => ['normal', 'italic'],
-		'bold' => ['bold', 'normal'],
-		'bolditalic' => ['bold', 'italic']
-	];
-
 	/**
 	 * Create a new controller instance.
 	 *
@@ -24,6 +17,12 @@ class ViewFontController extends Controller {
 	 */
 	public function __construct()
 	{
+		$this->styles = [
+			'normal' => ['normal', 'normal'],
+			'italic' => ['normal', 'italic'],
+			'bold' => ['bold', 'normal'],
+			'bolditalic' => ['bold', 'italic']
+		];
 		$this->middleware('guest');
 	}
 
@@ -147,7 +146,7 @@ class ViewFontController extends Controller {
 	public function css($name, $style)
 	{
 		$name = str_replace('+', ' ', $name);
-		
+
 		$font = Font::name($name)->first();
 		if($font == null) {
 			return 'false';
@@ -156,7 +155,7 @@ class ViewFontController extends Controller {
 		$styles = explode(',', $style);
 		$css = '';
 		foreach($styles as $s) {
-			$style_array = self::STYLES[$s];
+			$style_array = $this->styles[$s];
 			$fontStyle = FontStyle::fontId($font->id)
 				->weight($style_array[0])
 				->italic($style_array[1])
