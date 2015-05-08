@@ -128,7 +128,7 @@ class ViewFontController extends Controller {
 
 		$formats = explode(',', $fontStyle->format);
 
-		// Generate font-style and font-weight from FontStyle obj
+		// Generate font-style and font-weight css from FontStyle obj
 		$cssStyle = $this->generateCssFontWeight($fontStyle);
 
 		$srcMain = $this->generateCssSrcMain($filename, $formats);
@@ -146,6 +146,8 @@ class ViewFontController extends Controller {
 
 	public function css($name, $style)
 	{
+		$name = str_replace('+', ' ', $name);
+		
 		$font = Font::name($name)->first();
 		if($font == null) {
 			return 'false';
@@ -171,6 +173,23 @@ class ViewFontController extends Controller {
 	public function cssDefault($name)
 	{
 		return $this->css($name, 'normal');
+	}
+
+	public function fontById($id)
+	{
+		$font = Font::find($id);
+		return response()->json($font);
+	}
+
+	public function fontStylesByFontId($font_id)
+	{
+		$output = array();
+		$output['font'] = Font::select('name', 'id')->find($font_id);
+		$output['styles'] = FontStyle::fontId($font_id)
+			->select('id', 'weight', 'italic', 'format')
+			->get();
+
+		return response()->json($output);
 	}
 
 

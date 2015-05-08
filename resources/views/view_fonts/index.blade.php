@@ -8,7 +8,9 @@
 
 @section('js-components')
 <script type="text/jsx;harmony=true" src="{{ asset('js/components/Font.js') }}"></script>
-<script type="text/jsx;harmony=true" src="{{ asset('js/components/Modal.js') }}"></script>
+<script type="text/jsx;harmony=true" src="{{ asset('js/components/FontStyles.js') }}"></script>
+<script type="text/jsx;harmony=true" src="{{ asset('js/components/WebFontModal.js') }}"></script>
+<script type="text/jsx;harmony=true" src="{{ asset('js/components/DescriptionModal.js') }}"></script>
 <script type="text/jsx;harmony=true" src="{{ asset('js/components/FontList.js') }}"></script>
 <script type="text/jsx;harmony=true" src="{{ asset('js/components/FontCategory.js') }}"></script>
 <script type="text/jsx;harmony=true" src="{{ asset('js/components/FontApp.js') }}"></script>

@@ -23,3 +23,5 @@ Route::controllers([
 Route::get('api/fonts/css/{name}/{style}', 'API\ViewFontController@css');
 Route::get('api/fonts/css/{name}', 'API\ViewFontController@cssDefault');
 Route::get('api/fonts', 'API\ViewFontController@index');
+Route::get('api/fonts/id/{id}', 'API\ViewFontController@fontById');
+Route::get('api/fonts/styles/id/{id}', 'API\ViewFontController@fontStylesByFontId');

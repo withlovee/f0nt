@@ -1,8 +1,13 @@
 var Font = React.createClass({
 
-	showDetail: function(){
-		console.log('show');
-		$('#myModal').modal({show: true});
+	showDetail: function(e){
+		e.preventDefault();
+		this.props.fontList.openDescriptionModal(this.props.id);
+	},
+
+	showWebFont: function(e){
+		e.preventDefault();
+		this.props.fontList.openWebFontModal(this.props.id);
 	},
 
 	render: function(){
@@ -20,7 +25,7 @@ var Font = React.createClass({
 				<div className="body">
 					<a href="#detail" onClick={this.showDetail} className="preview" style={divStyle}>{this.props.text}</a>
 					<p className="buttons">
-						<a href="#webfont" className="button">เว็บฟอนต์</a>
+						<a href="#webfont" onClick={this.showWebFont} className="button">เว็บฟอนต์</a>
 						<a href="#download" className="button">ดาวน์โหลด</a>
 					</p>
 				</div>
